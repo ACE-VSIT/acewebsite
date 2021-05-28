@@ -52,7 +52,7 @@
     </div>
     <div id="main-wrapper" class="wrapper-hidden z-index-100">
       {% block header %}
-      <nav class="navbar navbar-default desktop-menu logo-left">
+      <nav id="nav-head" class="navbar navbar-default desktop-menu logo-left">
         <div class="container-fluid navbar-inner">
           <div class="navbar-logo">
             <a
@@ -178,7 +178,7 @@
     {% block footer %}
     <script type="text/javascript">
       $(document).ready(function () {
-        $("nav").addClass("navbar-fill");
+        $("nav").addClass("navbar-additional");
         $("#footer-year-display").text(new Date().getFullYear());
       });
     </script>

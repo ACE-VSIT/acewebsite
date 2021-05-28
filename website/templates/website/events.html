@@ -71,3 +71,14 @@
         </div>
     </section>
 {% endblock %}
+
+<!-- To make the navbar solid -->
+
+{% block footer %}
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("nav").addClass("navbar-fill");
+        $("#footer-year-display").text(new Date().getFullYear());
+      });
+    </script>
+    {% endblock %}

@@ -2205,10 +2205,14 @@ function initMap() {
             }
 
             /* (1.5) Navbar type */
+            // To make the navbar solid in some pages and transparent in some pages
             _navbar_type() {
                 if (VIEWPORT.w >= mobile_point) {
+                    var check_navbar_y = document.getElementById('nav-head').classList;
                     if ($(COMMON.win).scrollTop() >= 100) {
-                        this.navbar.addClass(navbar_type);
+                        if(!check_navbar_y.contains("navbar-fill")){
+                            this.navbar.addClass(navbar_type);
+                        }
                         logo_light.css({
                             'display': 'none'
                         });
@@ -2216,7 +2220,9 @@ function initMap() {
                             'display': 'block'
                         });
                     } else if ($(COMMON.win).scrollTop() < 100) {
-                        this.navbar.removeClass(navbar_type);
+                        if(check_navbar_y.contains("navbar-fill")&&check_navbar_y.contains("navbar-additional")){
+                            this.navbar.removeClass(navbar_type);
+                        }
                         logo_light.css({
                             'display': 'block'
                         });
@@ -2262,7 +2268,7 @@ function initMap() {
                 let navbar = this.navbar;
                 btn.on('click', function () {
                     navbar_type = $(this).data('header-type');
-                    navbar.removeClass('navbar-fill navbar-fade navbar-small navbar-scroll');
+                    navbar.removeClass('navbar-fade navbar-small navbar-scroll');
                 });
                 btn.on('click', () => {
                     this._navbar_type();
@@ -2367,6 +2373,8 @@ function initMap() {
                 /* OPTIONAL(DEMO ONLY) END */
             }
         }
+
+        
 
         /* [5] Declaration of constants for main classes */
         const HERO_HEADER = new HERO();

@@ -2372,9 +2372,7 @@ function initMap() {
                 this._hamburger_type();
                 /* OPTIONAL(DEMO ONLY) END */
             }
-        }
-
-        
+        }        
 
         /* [5] Declaration of constants for main classes */
         const HERO_HEADER = new HERO();

@@ -3148,10 +3148,7 @@ tbody.collapse.show {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
-    color:white;
-    background-color: transparent;
-  }
+    justify-content: space-between; }
 
 .navbar-brand {
   display: inline-block;
@@ -7089,8 +7086,6 @@ Fonts
   --navbar_toolbar_background: #f8f8f8;
   --navbar_background: #ffffff;
   --loader_background: #eee;
-  --navbar_background_before: #ffffff00;
-  --text_color_after: #ffffff;
   --toggle_color: rgba(35, 35, 35, 0.8);
   /* Primary Sizes */
   --navbar_height: 80px;
@@ -10015,8 +10010,8 @@ button:focus, input:focus {
   position: fixed;
   border-bottom: 1px solid rgba(236, 236, 236, 0.2);
   -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
- }
+  transition: all .3s ease-in-out;}
+  
   .navbar-default .navbar-inner .navbar-menu .navbar-menu-list li a {
     color: #fff;
     font-weight: 400;
